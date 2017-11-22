@@ -35,6 +35,18 @@
                 align-items: center;
                 justify-content: center;
             }
+
+            .hidden {
+                display: none;
+            }
+
+            #imprint-trigger {
+                cursor: pointer;
+            }
+
+            imprint {
+                font-size: 10px;
+            }
         </style>
     </head>
     <body>
@@ -48,7 +60,33 @@
                     <a href="https://uli.io" title="uli.io">uli.io</a><br>
                     <a href="https://kletterwald-pottenstein.de" title="Kletterwald Pottenstein">Kletterwald Pottenstein</a>
                 </p>
+                <br>
+                <br>
+                <br>
+                <imprint>
+                    <p id="imprint-trigger"> Impressum</p>
+                    <p id="imprint" class="hidden">
+                        Uli Ehler<br>
+                        Nelkenweg 3<br>
+                        82327 Tutzing<br>
+                        <a href="mailto:mail@uli.io">mail@uli.io</a><br>
+                        <br>
+                        built with ♥. Hostet on <a href="https://uberspace.de" title="uberspace">Uberspace</a><br>
+                    </p>
+                </imprint>
             </content>
         </container>
+        <script>
+            window.onload = init;
+
+            function init() {
+                document.getElementById('imprint-trigger').onclick = triggerImprint;
+            }
+
+            function triggerImprint() {
+                let classList = document.getElementById('imprint').classList;
+                classList.contains('hidden') ? classList.remove('hidden') : classList.add('hidden');
+            }
+        </script>
     </body>
 </html>
