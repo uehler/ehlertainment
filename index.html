@@ -1,16 +1,21 @@
-<html>
+<html lang="en">
     <head>
-        <title>Ehlertainment</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Ehlertainment</title>
+        <meta name="description" content="ehlertainment - we love to code">
+
         <style type="text/css">
-            html, body, container {
+            main {
                 height: 100vh;
+                margin-top: 5rem;
             }
 
             body {
                 font-family: 'avenir next', avenir, 'helvetica neue', helvetica, roboto, noto, ubuntu, 'segoe ui', arial, sans-serif;
                 background-color: black;
+                text-align: center;
             }
 
             body, a {
@@ -24,71 +29,34 @@
 
             h3 {
                 font-weight: 400;
+                margin-top: 4rem;
             }
 
-            h3, p {
-                text-align: center;
-            }
-
-            container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .hidden {
-                display: none;
-            }
-
-            #imprint-trigger {
-                cursor: pointer;
-            }
-
-            imprint {
+            .imprint {
                 font-size: 10px;
             }
         </style>
     </head>
     <body>
-        <container>
-            <content>
-                <h1>< ehlertainment ></h1>
-                <p>we love to code</p>
-                <br>
-                <h3>projects:</h3>
-                <p>
-                    <a href="https://uli.io" title="uli.io">uli.io</a><br>
-                    <a href="https://kletterpark.guide" title="Kletterpark Guide">Kletterpark Guide</a><br>
-                    <a href="https://kletterwald-pottenstein.de" title="Kletterwald Pottenstein">Kletterwald Pottenstein</a><br>
-                    <a href="https://scouting.shop" title="Scouting Shop">Scouting Shop</a>
-                </p>
-                <br>
-                <br>
-                <br>
-                <imprint>
-                    <p id="imprint-trigger"> Impressum</p>
-                    <p id="imprint" class="hidden">
-                        Uli Ehler<br>
-                        Nelkenweg 3<br>
-                        82327 Tutzing<br>
-                        <a href="mailto:mail@uli.io">mail@uli.io</a><br>
-                        <br>
-                        built with ♥. Hostet on <a href="https://uberspace.de" title="uberspace">Uberspace</a><br>
-                    </p>
-                </imprint>
-            </content>
-        </container>
-        <script>
-            window.onload = init;
+        <main>
+            <h1>< ehlertainment ></h1>
+            <p>we love to code</p>
 
-            function init() {
-                document.getElementById('imprint-trigger').onclick = triggerImprint;
-            }
+            <h3>projects:</h3>
+            <p>
+                <a href="https://uli.io" title="uli.io">uli.io</a><br>
+                <a href="https://kletterpark.guide" title="Kletterpark Guide">Kletterpark Guide</a><br>
+                <a href="https://kletterwald-pottenstein.de" title="Kletterwald Pottenstein">Kletterwald Pottenstein</a><br>
+                <a href="https://scouting.shop" title="Scouting Shop">Scouting Shop</a>
+            </p>
+        </main>
 
-            function triggerImprint() {
-                let classList = document.getElementById('imprint').classList;
-                classList.contains('hidden') ? classList.remove('hidden') : classList.add('hidden');
-            }
-        </script>
+        <p class="imprint">
+            Impressum <br>
+            Uli Ehler<br>
+            Kleines Bergl 2<br>
+            91257 Pegnitz<br>
+            <a href="mailto:mail@uli.io">mail@uli.io</a>
+        </p>
     </body>
 </html>
